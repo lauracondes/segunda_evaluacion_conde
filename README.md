@@ -1,1 +1,1 @@
-# segunda_evaluacion_conde
+Falta buscar más información para hacer los graficos, clase del 22 del noviembre
