@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Camellia Sinesis</title>
+
+    <!-- COMMON TAGS -->
+<meta charset="utf-8">
+<title>Camellia Sinesis</title>
+<!-- Search Engine -->
+<meta name="description" content="Información relacionada a la planta del té">
+<!-- Schema.org for Google -->
+<meta itemprop="name" content="Camellia Sinesis">
+<meta itemprop="description" content="Información relacionada a la planta del té">
+<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<meta name="og:title" content="Camellia Sinesis">
+<meta name="og:description" content="Información relacionada a la planta del té">
+<meta name="og:image" content="https://image.flaticon.com/icons/svg/1087/1087420.svg">
+<meta name="og:type" content="website">
+    <link rel="icon" href="media/green-tea.png" sizes="16x16" type="image/png">
+   
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,800');
+</style>
+
+    <!-- Vamos a buscar el CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--Vamos a buscar el CSS de Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- Vamos por nuestro CSS, basado en https://startbootstrap.com/template-overviews/grayscale/ -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Aquí vamos por el estilo y script del mapa-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+</head>
+
+<body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="titular"></span></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">SOBRE EL TÉ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#dataviz">VISUALIZACIONES</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Este encabezado viene de https://startbootstrap.com/snippets/video-header/ -->
+    <header>
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <!--Favor revisar https://www.w3schools.com/html/html5_video.asp-->
+            <source src="https://r3---sn-a5mlrn76.googlevideo.com/videoplayback?sparams=aitags,clen,dur,ei,expire,gir,id,ip,ipbits,itag,keepalive,lmt,mime,mip,mm,mn,ms,mv,pl,requiressl,source&aitags=133,134,135,136,160,242,243,244,247,278&clen=1632942&dur=16.057&ei=jrgSXJuvG8eHV9nLjMAK&gir=yes&id=o-AJGqtHmZ15cdURWcnCPYSWpToNVwF6LWnf35RDlmGhzW&ip=2001:bc8:4700:2000::6c35&ipbits=0&itag=247&keepalive=yes&lmt=1446770569083525&mime=video/webm&pl=24&requiressl=yes&source=youtube&expire=1544752366&key=cms1&fvip=3&c=WEB&signature=172859C8F49516A3009BD292AD1F184C8EB13A4C.035F9A03D9FEA08DFBB2222A8DA573B0AA242260&title=tea+pour+HD.webm&redirect_counter=1&cm2rm=sn-25gde7s&fexp=23763603&req_id=39d2b949b1a0a3ee&cms_redirect=yes&mip=200.89.66.88&mm=34&mn=sn-a5mlrn76&ms=ltu&mt=1544730649&mv=m" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="d-flex text-center h-100">
+                <div class="my-auto w-100 text-white">
+                    <h1 class="display-3 titular"></h1>
+                    <h2>Camellia Sinesis, la planta del té</h2>
+                    <p class="pt-3"><a href="#about"><i class="fas fa-3x fa-arrow-alt-circle-down"></i></i></a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="about-section text-center"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">Camellia Sinesis</h2>
+                    <p class="text-white-50"> Es la planta de la cual a partir de sus hojas se obtienen los principales tipos de té. <br>Son cinco tipos y se diferencian a través del proceso de producción (la oxidación) que tienen las hojas, los tipos son el té blanco, verde, rojo, azul y negro.<br> La planta de té es un arbusto de hoja perenne, cuando se cultiva no sobrepasa los dos metros de alto y sus hojas se reconocen por ser de bordes dentados.
+                </div>
+            </div>
+            <img src="img/planta%20de%20te.png" alt="">
+        </div>
+    </section>
+
+    <!-- dataviz Section -->
+    <section id="dataviz" class="dataviz-section bg-light">
+        <div class="container">
+
+            <!-- MAPA -->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-8 col-lg-7">
+                    <div id="leaflet"></div>
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>El origen del té</h4>
+                        <p class="text-black-50 mb-0"> Se reconoce como que el emperador chino Shen Nong fue el que descubrió el té en el año 2637 AC.<br><br> Desde entonces se pueden encontrar alrededor de 3000 variedades de las cuales todas vienen de la misma planta. <br> <br>Sin embargo cada uno de los cinco tipos de té se origino en distintos lugares de China. El té verde en la región de Hangzhou, el rojo en Yunnan y el blanco en Fuding, China. El té negro en Sun Moon Lake y el azul en Nantou, Taiwan.  </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Información de avistamiento de ballenas en Chile-->
+
+            <!-- PRIMER GRÁFICO -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6">
+                    <svg id="chart-1"></svg>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">Nivel de Oxidación en el té</h4>
+                                <p class="mb-0 text-white-50">En este gráfico se presentan los distintos grados de oxidación que presenta la planta de té y por lo que se diferencia cada tipo.<br> El proceso de producción del té consta de cinco pasos que varian según cada variedad.<br> Los pasos son: recolección, marchitado, enrulado, oxidación y secado.</p>
+                                <hr class="d-none d-lg-block mb-0 ml-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEGUNDO GRÁFICO -->
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6">
+                    <svg id="chart-2"></svg>
+                </div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">Consumo de té en el mundo</h4>
+                                <p class="mb-0 text-white-50">Se reconoce al té como la segunda bebida más consumida alrededor del mundo. El aumento del consumo del té es debido a que se relaciona con los beneficios que tiene para la salud. Además ha aumentado el consumo de tés más sofisticados y dentro de generaciones más jovenes. 
+                                    <br>
+                                En el gráfico se ven los seis países que más consumen té.
+                                <hr class="d-none d-lg-block mb-0 mr-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+        <div class="container">
+            <p><span class="titular"></span> fue desarrollado por Laura Conde para Multimedia II</p>
+            <p>Segundo semestre, 2018 · Diseño Gráfico</p>
+            <p>Universidad de Chile</p>
+            <p><a href="#page-top"><i class="fas fa-arrow-alt-circle-up"></i></a></p>
+        </div>
+    </footer>
+
+    <!-- Vamos a buscar algo de JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!--ahora aprovechamos que Bootstrap necesita jQuery, para manipular el DOM-->
+    <script>
+        (function($) {
+            "use strict"; // Start of use strict
+
+            $(".titular").text("¿De dónde viene el té?");
+        })(jQuery); // End of use strict
+    </script>
+
+    <!--el tema de bootstrap que usamos necesita este script para funcionar-->
+    <script src="js/theme.js"></script>
+
+    <!--acá comienzan las visualizaciones-->
+
+    <!--primero el mapa-->
+
+
+        <script>
+        var mymap = L.map('leaflet').setView([26.5150707, 110.47369], 4 );
+
+        var georeferencias = [
+        {
+            lugar: "Hangzhou",
+            coordenadas: [30.2610923, 119.8916971],
+        }, {
+            lugar: "Yunnan",
+            coordenadas: [25.1146282, 97.3671194]
+        }, {
+            lugar: "Fuding",
+            coordenadas: [27.178098, 120.0477689]
+        }, {
+            lugar: "Nantou",
+            coordenadas: [23.9217605, 120.6457898]
+        }, {
+            lugar: "Sun Moon Lake",
+            coordenadas: [23.8431211, 120.8358487]
+        }, 
+        ];
+        
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 12,
+            minZoom: 1,
+            id: 'mapbox.streets'
+        }).addTo(mymap);
+        
+        for (var x = 0; x < georeferencias.length; x++) {
+            lat = georeferencias[x].coordenadas[0];
+            lon = georeferencias[x].coordenadas[1];
+            circle = L.circle([lat, lon], {
+                fillColor: '#3736FD',
+                fillOpacity: 0.5,
+                weight: 0,
+                radius: 70000
+            }).addTo(mymap);
+            console.log(lat + "," + lon);
+        }
+    </script>
+
+
+    <!--luego voy a buscar una biblioteca que Data Driven Documents (DDD = d3)-->
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!--esto es para un gráfico -->
+
+    <script>
+
+        var oxidacion = [
+        {especie: "Blanco", porcentaje: 0 },
+        {especie: "Verde", porcentaje: 15},
+        {especie:"Azul", porcentaje:80},
+        {especie: "Negro", porcentaje:90},
+        {especie:"Rojo", porcentaje:100},
+       
+    
+       ];
+
+        var coso = d3.select("#chart-1").attr("width", "100%").attr("height", "420").style("background", "#0C133D");
+
+        coso.selectAll("rect").data(oxidacion).enter().append("rect").attr("x",40).attr("y", function(d, i) { return (i + 1) * 40; }).attr("width", function(d) { return d.porcentaje*4 }).attr("height",30).attr("fill","#BEE800")
+
+         coso.selectAll("text").data(oxidacion).enter().append("text").text(function(d) {return (d.especie + " (" + d.porcentaje + " %)")}).attr("text-anchor", "start").attr("x", function(d, i) { return (d.porcentaje*4)+50 }).attr("y", function(d, i) { return ((i + 1) * 40)+20 }).attr("font-family", "sans-serif").attr("font-size", "12px").attr("fill", "#F5FAF4"); 
+
+    </script>
+       
+   
+
+    <!--esto es para otro gráfico -->
+ <script src="https://d3js.org/d3.v5.min.js"></script>
+
+<script>
+   var data = [
+      {name: 'CHINA', toneladas: 1061, color:"#F3FAD0"},
+      {name: 'INDIA', toneladas: 829, color:"#DBF273"},
+       {name: 'RUSIA', toneladas: 176, color:"#CFEE45"},
+       {name: 'TURQUÍA', toneladas: 138, color:"#BEE800"},
+     {name: 'JAPÓN', toneladas: 125, color:"#9CBE00"},
+    {name: 'UK', toneladas: 111, color:"#687F00"},
+    
+    
+    ]    
+    var esto = d3.select("#chart-2").attr("width", "100%").attr("height", "400").style("background", "#0C133D");
+    var g = esto.selectAll("g")
+      .data(data)
+      .enter()
+      .append("g")  
+    g.append("circle")
+      .attr("cx", function(d, i) { return (70 * (i++)+100); })
+      .attr("cy", function(d) { return 200; })
+      .attr("r", function(d) { return d.toneladas/30; })
+      .attr("fill",function(d){ return d.color; })
+    g.append("text")
+      .attr("x", function(d, i) { return (70 * (i++)+100); })
+      .attr("y", function(d, i) { return 280; })
+      .attr("fill","#F5FAF4")
+      .attr('text-anchor','middle')
+      .text(function(d) { return d.name; })
+
+</script>
+</body>
+
+</html>
